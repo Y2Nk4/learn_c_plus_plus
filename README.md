@@ -34,4 +34,5 @@ So, I think it's the beginning of a new journey.
 
 #### 0x01 Chapters
 
-- [0x01 HelloWorld]()
+- [0x01 Environment](./0x00_Environment)
+- [0x01 HelloWorld](./0x01_HelloWorld)
