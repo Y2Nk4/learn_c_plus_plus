@@ -32,8 +32,13 @@ C++, so learning C++, might help me to understand more about JavaScript(or Node)
 
 So, I think it's the beginning of a new journey.
 
+**Note: Content was written on Chinese.**
+
 #### 0x01 Chapters
 
 - [0x01 Environment](./0x00_Environment)
 - [0x01 HelloWorld](./0x01_HelloWorld)
 - [0x02 DataType & Variables](./0x02_DataTypes&Variables)
+- [0x03 Flow Control](./0x03_Flow_Control)
+- [0x04 Pointer & References](./0x04_Pointer_&_References)
+- [0x05 Class & Object](./0x05_Class_&_Object)
