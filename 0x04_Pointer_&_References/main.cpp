@@ -20,9 +20,11 @@ int main() {
     int *c = &a;
     int& d = a;
     int e = 12;
+    int g;
 
     cout << "b:" << *b << endl;
     cout << "c:" << (*c == a) << endl;
+    cout << "c: " << c << " addr: " << &c << endl;
     cout << "a:" << a << " addr: " << &a << endl;
     cout << "b:" << b << " is same: " << " addr: " << &b << endl;
     cout << "d:" << d << " is same: " << (a == d) << " addr: " << &d << endl;

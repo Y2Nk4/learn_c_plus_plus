@@ -25,6 +25,10 @@ class people{
             return this->execProtect();
         }
 
+        people(){
+            cout << "construct func 'people' is called" << endl;
+        }
+
     protected:
         int execProtect() {
             return 1;

@@ -42,3 +42,6 @@ So, I think it's the beginning of a new journey.
 - [0x03 Flow Control](./0x03_Flow_Control)
 - [0x04 Pointer & References](./0x04_Pointer_&_References)
 - [0x05 Class & Object](./0x05_Class_&_Object)
+
+#### 0x05 References:
+[C++ 教程, 菜鸟教程](https://www.runoob.com/cplusplus/cpp-tutorial.html)
