@@ -11,15 +11,22 @@ class people{
         // 在类中使用枚举值
         enum { Male, Female } sex;
 
-
+        // 构造函数
         people(string name){
             this->name = name;
             cout << "construct func 'people' is called" << endl;
             cout << "this pointer: " << this << endl;
         }
 
-        people(const people &obj){
+        // 拷贝构造函数
+       /* people(const people &obj){
+            this->name = obj.name + "(cloned)";
             cout << "cloned a people: " << obj.name << endl;
+        }*/
+
+        // 析构函数
+        ~people(){
+            cout << this->name << " is gonna be destroyed" << endl;
         }
 
         string getSex() {
@@ -47,6 +54,25 @@ class people{
         }
         void saySomething (int word) {
             cout << this->name << " says: " << word << endl;
+        }
+
+        // 运算符重载
+        people operator+(const people& people1){
+            cout << "Operator executed inside object " << this->name << endl;
+
+            if (people1.sex == this->sex) {
+                cout << "同性不能生孩子~" << endl;
+
+                people empty("Nothing");
+                return empty;
+            }else{
+                people child("Child of " + people1.name + " and " + this->name);
+                child.sex = (0 + (rand() % (1 - 0 + 1)) == 1) ? Male : Female;
+
+                cout << endl << "Child " << child.name << " 的指针: " << &child << endl;
+
+                return child;
+            }
         }
 
     protected:
@@ -85,6 +111,24 @@ int main() {
     // 重载测试
     John.saySomething("Hi!");
     John.saySomething(23);
+
+    people Alex("Alex");
+    Alex.sex = people::Male;
+
+    people Jennifer("Jennifer");
+    Jennifer.sex = people::Female;
+
+    cout << "Try to add John and Alex" << endl;
+    people child = John + Alex;
+    cout << "Name of the child:" << child.name << endl << endl;
+
+    cout << "Try to add John and Jennifer" << endl;
+    people child2 = John + Jennifer;    // 若定义了拷贝构造函数，会调用拷贝构造函数
+                                        // 这里是在运算时生成了一个 people 对象，然后赋值运算的时候再生成了一个(赋值运算会调用拷贝构造函数)
+                                        // 所以会看到运算时生成的 people 对象的析构函数会被调用
+                                        // 输出对象的指针会发现前后对象的指针是不一样的，印证了上面一条。
+    cout << "Name of the child:" << child2.name << endl;
+    cout << endl << "Child " << child2.name << " 的指针: " << &child << endl;
 
     return 0;
 }
