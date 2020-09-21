@@ -43,5 +43,8 @@ So, I think it's the beginning of a new journey.
 - [0x04 Pointer & References](./0x04_Pointer_&_References)
 - [0x05 Class & Object](./0x05_Class_&_Object)
 
+#### 0x02 See something that you don't agree?
+**Please submit an issue if you think something in these notes. I will appreciate it.**
+
 #### 0x05 References:
 [C++ 教程, 菜鸟教程](https://www.runoob.com/cplusplus/cpp-tutorial.html)

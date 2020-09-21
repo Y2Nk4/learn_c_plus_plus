@@ -29,9 +29,22 @@ class people{
             cout << "construct func 'people' is called" << endl;
         }
 
+        int func1(int x);
+
     protected:
         int execProtect() {
             return 1;
+        }
+};
+
+int people::func1(int x) {
+    return x * 2;
+}
+
+class boy: public people{
+    public:
+        boy(){
+            this->sex = Male;
         }
 };
 
@@ -44,6 +57,10 @@ int main() {
     // cout << "Call Protected: " << John.execProtect() << endl;
 
     cout << "Call Protected func through public method: " << John.execProtectedFuncInPublic() << endl;
+    cout << "Test func: " << John.func1(2) << endl;
+
+    boy Kim;
+    cout << "Kim's sex is: " << Kim.getSex() << endl;
 
     return 0;
 }
